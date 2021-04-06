@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #161616;
+    color: #f0f0f0;
+    font-family: 'Oswald';
+    overflow: hidden;
+}
+.cpage{
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    height: 90vh;
+    width: 100%;
+    flex-direction: column;
+}
+h1{
+    font-size: 100px;
+    white-space: nowrap;
+    /* font-style: italic; */
+    font-weight: 350;
+    margin-left: 20px;
+    transition: .5s ease-in-out;
+}
+.block{
+    display: flex;
+    border-bottom: 1px solid white;
+}
+
+.hover{
+    opacity: 0;
+    overflow: hidden;
+    
+    transition: .5s ease-in-out;
+}
+.block:hover .hover{
+    opacity: 1;
+    animation: animate 10s linear infinite;
+    transition: .5s ease-in-out;
+}
+@keyframes animate{
+    from{
+        transform: translateX(50%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.block:hover .present{
+    opacity: 0;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+}
+.footer ul{
+    list-style: none;
+    display: flex;
+}
+.footer ul li {
+    margin-left:25px ;
+}
+.footer .logo{
+    margin-right: 25px;
+}
+a{
+    text-decoration: none;
+    color: rgb(182, 175, 175);
+    font-size: 20px;
+    border: .5px solid rgb(182, 175, 175);
+    border-radius: 50%;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: .3s ease-in-out;
+}
+a:hover{
+    background: #f0f0f0;
+    color: #161616;
+    transition: .3s ease-in-out;
+}

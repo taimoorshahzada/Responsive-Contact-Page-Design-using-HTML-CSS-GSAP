@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Page Design using HTML CSS GSAP || HTML CSS & JAVASCRIPT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+</head>
+<body>
+    <div class="cpage">
+        <div class="email block">
+            <h1 class="present">Email</h1>
+            <h1 class="hover">johndoe@example.com</h1>
+        </div>
+        <div class="phone block">
+            <h1 class="present">Phone</h1>
+            <h1 class="hover">+92 304 5432134</h1>
+        </div>
+        <div class="address block">
+            <h1 class="present">Address</h1>
+            <h1 class="hover">Balcony Park, Oxford Street, London</h1>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="social">
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="">LOGO</a>
+        </div>
+    </div>
+<script>
+    const tl = gsap.timeline();
+    tl.from(".cpage",{
+        duration: 2,
+        opacity: 0,
+        y:"-100%",
+        stagger: {
+            amount: 1
+        }
+    });
+    tl.from(".footer",{
+        duration: 1,
+        opacity: 0,
+        y:"100%",
+        stagger: {
+            amount: .25
+        }
+    },"-=.5");
+</script>
+</body>
+</html>
